@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+
+android:padding="25dp"
+android:orientation="vertical"
+android:background="#F5F2FB"
+tools:context=".SelectService">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:id="@+id/backtohome"
+        android:src="@drawable/arrow"
+       />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/profile"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:src="@drawable/logo"
+        app:civ_border_color="#F5F2FB"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="นัดหมายการจอง"
+        android:textSize="20sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="150dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="23sp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="150dp"
+        android:id="@+id/tv_name"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:layout_marginTop="165dp"
+        android:background="@drawable/shape_login"
+        android:paddingTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เลือกบริการ"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="80dp"
+            android:id="@+id/tvService"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp">
+
+            <TableRow
+                android:orientation="horizontal"
+                android:layout_marginRight="80dp">
+                <RadioGroup
+                    android:id="@+id/serviceRDG"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/service1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ตัด"
+                        android:textColor="#666161"
+                        android:textSize="20sp"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="สระ/ไดร์"
+                        android:textSize="20sp"
+                        android:textColor="#666161"
+                        android:id="@+id/service2"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ทำสี"
+                        android:textSize="20sp"
+                        android:textColor="#666161"
+                        android:id="@+id/service3"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="อบไอน้ำ"
+                        android:textSize="20sp"
+                        android:textColor="#666161"
+                        android:id="@+id/service4"/>
+
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="210dp">
+
+        <TextView
+            android:id="@+id/price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@+id/service1"
+            android:text="120 บาท"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_marginLeft="11dp"
+            android:text="100 บาท"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/price3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="1800 บาท"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/price4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_marginLeft="11dp"
+            android:text="300 บาท"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="280dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="458dp"
+            android:background="#8870B8" />
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveservice"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="580dp"
+        android:background="@drawable/shape_login_button"
+        android:text="ถัดไป"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
